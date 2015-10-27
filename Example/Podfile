@@ -1,0 +1,12 @@
+source 'https://github.com/CocoaPods/Specs.git'
+use_frameworks!
+
+target 'OceanView_Example', :exclusive => true do
+  pod "OceanView", :path => "../"
+end
+
+target 'OceanView_Tests', :exclusive => true do
+  pod "OceanView", :path => "../"
+
+  
+end

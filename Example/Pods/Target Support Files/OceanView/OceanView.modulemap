@@ -1,0 +1,6 @@
+framework module OceanView {
+  umbrella header "OceanView-umbrella.h"
+
+  export *
+  module * { export * }
+}

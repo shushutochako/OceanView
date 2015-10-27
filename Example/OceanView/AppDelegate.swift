@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  OceanView
 //
-//  Created by 増島 亘康 on 10/27/2015.
-//  Copyright (c) 2015 増島 亘康. All rights reserved.
+//  Created by shushutochako on 10/27/15.
+//  Copyright (c) 2015 shushutochako. All rights reserved.
 //
 
 import UIKit

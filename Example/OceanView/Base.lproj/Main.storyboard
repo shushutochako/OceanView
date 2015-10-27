@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="OceanView_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,11 +16,58 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g1n-9B-RYH" userLabel="rearWave" customClass="OceanView" customModule="OceanView">
+                                <rect key="frame" x="0.0" y="350" width="600" height="250"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="8bc-ns-rhV"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Je-kI-deo" userLabel="frontWave" customClass="OceanView" customModule="OceanView">
+                                <rect key="frame" x="0.0" y="300" width="600" height="300"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="7Zf-h6-8NM"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Scr-cf-99L">
+                                <rect key="frame" x="265" y="200" width="70" height="50"/>
+                                <color key="backgroundColor" red="0.13725490200000001" green="0.25098039220000001" blue="0.35294117650000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Ood-0E-aKt"/>
+                                    <constraint firstAttribute="width" constant="70" id="bHq-d4-1I3"/>
+                                </constraints>
+                                <state key="normal" title="Move">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.679496284965035" green="0.44353693181818182" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="selected">
+                                    <color key="titleColor" red="0.78911713289999996" green="0.84383194930000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="g1n-9B-RYH" secondAttribute="trailing" id="4uT-l0-IR6"/>
+                            <constraint firstItem="g1n-9B-RYH" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="7mw-jR-Y2z"/>
+                            <constraint firstAttribute="trailing" secondItem="0Je-kI-deo" secondAttribute="trailing" id="O6c-ZJ-bJQ"/>
+                            <constraint firstItem="0Je-kI-deo" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="Zac-HR-8un"/>
+                            <constraint firstItem="Scr-cf-99L" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="fY3-i6-4Dt"/>
+                            <constraint firstItem="0Je-kI-deo" firstAttribute="top" secondItem="Scr-cf-99L" secondAttribute="bottom" constant="50" id="i5Y-7O-QtG"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="g1n-9B-RYH" secondAttribute="bottom" id="ikS-VF-jbf"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="0Je-kI-deo" secondAttribute="bottom" id="lPb-hW-WdP"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="frontWaveView" destination="0Je-kI-deo" id="pv0-Dk-CPS"/>
+                        <outlet property="moveButton" destination="Scr-cf-99L" id="C48-oa-jev"/>
+                        <outlet property="rearWaveView" destination="g1n-9B-RYH" id="fjP-yF-zQX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="266" y="339"/>
         </scene>
     </scenes>
 </document>

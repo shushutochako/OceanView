@@ -1,0 +1,6 @@
+framework module Pods_OceanView_Example {
+  umbrella header "Pods-OceanView_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

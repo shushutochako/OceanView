@@ -1,0 +1,14 @@
+PODS:
+  - OceanView (0.1.0)
+
+DEPENDENCIES:
+  - OceanView (from `../`)
+
+EXTERNAL SOURCES:
+  OceanView:
+    :path: ../
+
+SPEC CHECKSUMS:
+  OceanView: 0d207e21d1cbc3391de975bcd826507ce040e9b4
+
+COCOAPODS: 0.39.0
